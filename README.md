@@ -126,10 +126,4 @@ após o POST as 3 filas devem voltar a `0` mensagens (tudo consumido).
 | `npm run build` / `nest build <app>` | compila (builder rspack)          |
 | `npm test`               | testes unitários (vitest)                    |
 
-## Próximos estudos
 
-- [ ] DLX + retry com backoff para falhas de pagamento
-- [ ] Idempotência no `order-created` (mesmo pedido entregue 2x)
-- [ ] Extrair `rabbitmq.config.ts` para `libs/` compartilhada
-- [ ] Migrar `emit` (fire-and-forget) para `send` (request/response) onde precisa de resposta
-- [ ] Subir cada serviço como container no compose
