@@ -1,0 +1,12 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - '${RABBITMQ_PORT:-5672}:5672' # amqp protocol
+      - '15672:15672' # web ui
+    env_file:
+      - .env
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-guest}
+      RABBITMQ_DEFAULT_PASSWORD: ${RABBITMQ_PASS:-guest}
